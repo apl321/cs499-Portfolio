@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Townsend's SNHU CS 499 Computer Science Capstone ePortfolio, featuring Travlr full-stack application enhancements.">
+  <title>Andrew Townsend | CS 499 ePortfolio</title>
+  <style>
+:root { color-scheme: light; --charcoal:#253239; --charcoal-deep:#1c282f; --steel:#7d9fab; --steel-deep:#476c7a; --paper:#f4f4f0; --ink:#233138; --muted:#55656c; --line:#bec8c9; --subtle:#dce2e0; }
+* { box-sizing: border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family: 'Segoe UI', Tahoma, Arial, sans-serif; line-height:1.76; }
+a { color:#315f70; text-underline-offset:4px; }
+a:hover { color:#203e4a; }
+a:focus-visible { outline:3px solid #b9985b; outline-offset:3px; }
+.wrap { max-width:1090px; margin:0 auto; padding-left:36px; padding-right:36px; }
+.mono { font-family:Consolas, 'Courier New', monospace; }
+.masthead { background:var(--charcoal); color:#f4f6f4; border-bottom:5px solid var(--steel); }
+.masthead-top { border-bottom:1px solid rgba(255,255,255,.19); padding-top:22px; padding-bottom:19px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.identity { font-weight:700; letter-spacing:.13em; font-size:.85rem; text-transform:uppercase; }
+.identity .mark { display:inline-block; border:1px solid var(--steel); padding:5px 9px; margin-right:13px; color:#d2e3e8; }
+.masthead-meta { font-size:.74rem; letter-spacing:.085em; color:#bbced3; text-align:right; }
+.hero { padding-top:70px; padding-bottom:69px; display:grid; grid-template-columns:minmax(0, 1fr) 200px; gap:55px; align-items:end; }
+.hero-caption { font-size:.74rem; color:#a9c7d0; font-family:Consolas,'Courier New',monospace; letter-spacing:.15em; text-transform:uppercase; margin:0 0 23px; }
+h1 { margin:0; max-width:730px; font-size:clamp(2.35rem,5.3vw,4.15rem); line-height:1.11; font-weight:650; letter-spacing:-.042em; }
+h1 em { font-family:Georgia, 'Times New Roman', serif; color:#acc7cd; font-style:italic; font-weight:400; letter-spacing:-.035em; }
+.hero-desc { margin:24px 0 0; max-width:650px; font-size:1.04rem; line-height:1.7; color:#d9e2e4; }
+.hero-aside { border-left:1px solid #72929d; padding-left:21px; color:#bdcdd1; font-family:Consolas,'Courier New',monospace; line-height:1.85; font-size:.76rem; letter-spacing:.055em; }
+.hero-aside strong { color:#f2f5f5; display:block; font-size:1.05rem; letter-spacing:0; margin:8px 0 10px; font-family:'Segoe UI',Tahoma,Arial,sans-serif; }
+.navbar { background:#e8eae5; border-bottom:1px solid var(--line); }
+.nav-inner { display:flex; flex-wrap:wrap; gap:0; }
+.nav-inner a { padding:16px 21px 16px 0; margin-right:20px; text-decoration:none; font-size:.81rem; color:var(--ink); font-weight:700; letter-spacing:.02em; border-bottom:2px solid transparent; }
+.nav-inner a:hover { border-color:var(--steel-deep); }
+main { padding-top:15px; padding-bottom:65px; }
+.portfolio-section { display:grid; grid-template-columns:165px minmax(0,1fr); column-gap:48px; border-top:1px solid var(--line); padding:44px 0 53px; scroll-margin-top:18px; }
+.portfolio-section:first-child { border-top:0; }
+.section-index { font-family:Consolas,'Courier New',monospace; color:var(--steel-deep); font-size:.85rem; letter-spacing:.09em; }
+.section-index .number { display:block; font-size:2.15rem; line-height:1; color:#57717b; letter-spacing:-.08em; margin-bottom:13px; }
+.section-index .short-rule { display:block; height:2px; width:43px; background:var(--steel-deep); margin:13px 0 12px; }
+.section-body { max-width:775px; min-width:0; }
+.section-kicker { font-size:.71rem; letter-spacing:.17em; text-transform:uppercase; font-family:Consolas,'Courier New',monospace; color:var(--steel-deep); font-weight:bold; margin:0 0 9px; }
+h2 { margin:0 0 15px; font-size:clamp(1.55rem,2.7vw,2.15rem); font-weight:650; line-height:1.27; letter-spacing:-.027em; }
+h3 { margin:23px 0 8px; font-size:1.06rem; letter-spacing:-.012em; }
+p { margin:0 0 19px; }
+.section-body>p:last-child { margin-bottom:0; }
+.meta { margin:0 0 23px; color:var(--muted); font-size:.88rem; }
+.section-intro { color:#43565e; }
+.project-name { padding:14px 0; border-top:1px solid var(--line); font-family:Consolas,'Courier New',monospace; font-size:.84rem; color:#536d76; }
+.enhancement { border-top:1px solid var(--line); display:grid; grid-template-columns:38px minmax(0,1fr); gap:18px; padding:27px 0 23px; }
+.enhancement:last-of-type { border-bottom:1px solid var(--line); }
+.enhancement-number { font-family:Consolas,'Courier New',monospace; color:#4c7682; font-size:.9rem; margin-top:2px; }
+.enhancement h3 { margin:0 0 8px; font-size:1.26rem; }
+.enhancement p { margin-bottom:11px; }
+.enhancement p:last-child { margin-bottom:0; font-size:.9rem; font-weight:650; }
+.documentation { margin-top:28px; }
+.documentation h3 { margin:0 0 9px; }
+.link-list { margin:13px 0 20px; padding:0; list-style:none; border-top:1px solid var(--line); }
+.link-list li { border-bottom:1px solid var(--line); padding:11px 0 12px; }
+.link-list a { font-weight:600; }
+.note { border-left:3px solid #789eaa; margin:23px 0 0; padding:3px 0 3px 16px; color:#4e6067; }
+.footer { border-top:1px solid var(--line); padding:24px 0 0; display:flex; justify-content:space-between; gap:15px; color:var(--muted); font-size:.81rem; }
+@media (max-width:850px) { .hero { grid-template-columns:1fr; gap:25px; padding-top:50px; padding-bottom:45px; } .hero-aside { max-width:400px; } .portfolio-section { grid-template-columns:110px minmax(0,1fr); gap:25px; } }
+@media (max-width:600px) { .wrap { padding-left:20px; padding-right:20px; } .masthead-top { align-items:flex-start; } .masthead-meta { max-width:140px; } .hero { padding-top:38px; } .hero-aside { display:none; } .nav-inner a { padding:12px 8px 12px 0; margin-right:13px; font-size:.75rem; } .portfolio-section { display:block; padding:30px 0 42px; } .section-index { display:flex; gap:12px; align-items:center; margin-bottom:19px; } .section-index .number { font-size:1.3rem; margin:0; } .section-index .short-rule { display:none; } .footer { flex-direction:column; } }
+@media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead-top">
+      <div class="identity"><span class="mark mono">AT</span> Andrew Townsend</div>
+      <div class="masthead-meta mono">SNHU&nbsp; / &nbsp;CS 499<br>CAPSTONE EPORTFOLIO</div>
+    </div>
+    <div class="wrap hero">
+      <div>
+        <p class="hero-caption">Professional portfolio / 2026</p>
+        <h1>From chemical engineering<br>to <em>cybersecurity.</em></h1>
+        <p class="hero-desc">A computer science capstone focused on reliable software, secure design, and practical problem-solving through the Travlr full-stack application.</p>
+      </div>
+      <aside class="hero-aside" aria-label="Project overview">
+        PROJECT  /  01
+        <strong>Travlr</strong>
+        FULL-STACK APPLICATION<br>
+        MONGODB &nbsp;/&nbsp; EXPRESS<br>
+        ANGULAR &nbsp;/&nbsp; NODE.JS<br>
+        <br>
+        THREE ENHANCEMENTS<br>
+        ONE CONNECTED SYSTEM
+      </aside>
+    </div>
+  </header>
+  <nav class="navbar" aria-label="Portfolio sections"><div class="wrap nav-inner">
+    <a href="#self-assessment">01&nbsp; Self-Assessment</a>
+    <a href="#code-review">02&nbsp; Code Review</a>
+    <a href="#enhancements">03&nbsp; Enhancements</a>
+    <a href="#source-code">04&nbsp; Source Code</a>
+  </div></nav>
+
+  <main class="wrap">
+    <section class="portfolio-section" id="self-assessment" aria-labelledby="self-title">
+      <div class="section-index" aria-hidden="true"><span class="number">01</span><span class="short-rule"></span><span>REFLECTION</span></div>
+      <div class="section-body">
+        <p class="section-kicker">Professional reflection</p>
+        <h2 id="self-title">Professional Self-Assessment</h2>
+        <p class="meta">Andrew Townsend · October 18, 2026</p>
+        <p>My educational and professional background has given me a somewhat different perspective than if I had entered the major directly. Before pursuing my B.S. in Computer Science at SNHU, I earned my B.S. in Chemical Engineering at UNH and gained professional experience in process engineering, manufacturing, and quality assurance. These experiences have influenced how I approach technical problems, particularly with regard to reliability, efficiency, and the potential consequences of design choices. Throughout the curriculum, I have developed a broader understanding of software development while also narrowing my professional interests toward cybersecurity.</p>
+<p>When I began the program, I was uncertain about which area of computer science I wanted to pursue. Data analytics was an attractive destination due to my previous experience as a process engineer and experience in using data and analytics to solve problems. As I progressed, I became increasingly interested in cybersecurity. I especially enjoy the adversarial nature of cybersecurity, as it would force me to continually adapt to and anticipate new threats. My current goal is to transition into a cybersecurity role, potentially progressing into cloud security engineering. I am also interested in operational technology security, where my engineering background and experience with industrial processes could provide additional value.</p>
+<p>My professional experience was greatly enhanced through collaboration and communication. Many of my most successful initiatives began as a conversation with an operator. Although engineers usually have a thorough understanding of a process, the operators who work with it every day have practical knowledge that cannot be fully captured through spreadsheets and documentation. Failing to take their experience into consideration often results in missed opportunities for improvement and the sort of tone-deaf decisions my profession is often criticized for.</p>
+<p>Throughout the program I have also developed my understanding of algorithms and data structures. Much like engineering, efficiency, scalability, and ease of maintenance are important components of problem solving (though admittedly I have not had to do much scaling-up in engineering). My coursework in Python, SQL, and data analysis has broadened my understanding of how information can be organized and manipulated to solve problems, and should be of great use in analyzing the various trade-offs presented by multiple potential solutions. There is, of course, always room for improvement.</p>
+<p>I believe software engineering in general as well as database development have been especially valuable areas of study. I recall being particularly frustrated with abstraction early on; processes often succeed or fail based on small details, so placing complicated procedures inside a black box and taking their functionality on “faith” was initially a difficult thing for me to accept. Over time, I was able to appreciate its necessity in managing complexity. Separating responsibilities and reducing complexity make larger applications easier to understand and maintain by reducing the need for the developer to understand every minute detail.</p>
+<p>Security has become an increasingly important factor in how I evaluate software. Early in my coursework, I often treated security as an afterthought, an approach that has historically contributed to vulnerabilities in software development. The increasing sophistication of cyberattacks has reinforced the necessity of treating cybersecurity as a foundational part of software design rather than something to be added afterward. My coursework in secure coding has also taught me to consider how a system might be exploited as opposed to simply functioning as I intended it to. Authentication, input validation, and protecting sensitive information all need to be considered during the development process. A program with serious security flaws may well be best off not functioning at all.</p>
+<p>All three enhancements build upon Travlr, a full-stack travel application originally developed in CS 465. The software engineering enhancement improves the application's structure, authentication, error handling, and maintainability. The algorithms enhancement adds functionality that allows users to search, filter, and sort trip information. The database enhancement expands upon its query capabilities, improves data validation, and connects the Angular interface to server-side searching, sorting, filtering, and pagination. Automated testing was also added to verify functionality, including authentication and database query parameters.</p>
+<p>Being able to use the same project for all three enhancements allowed me to examine how these areas interact with one another. Changes to one part of the application often required corresponding changes in other areas, which I think reinforces the importance of taking a holistic approach to applications.</p>
+<p>Completing this program has given me a foundation to continue developing my technical skills. When I graduated from my engineering major, our professors told us that now we were ready to learn engineering. I believe computer science is similar in that regard, and that the degree shows that you have enough of a foundation to begin learning how to make meaningful contributions to your team. Moving forward, I intend to build upon my education through certifications and independent projects, with the eventual goal of working in cloud security engineering. There is still much to learn, but I believe my professional experiences and education will put me in a position to succeed.</p>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="code-review" aria-labelledby="review-title">
+      <div class="section-index" aria-hidden="true"><span class="number">02</span><span class="short-rule"></span><span>EVALUATION</span></div>
+      <div class="section-body">
+        <p class="section-kicker">Initial evaluation</p>
+        <h2 id="review-title">Code Review</h2>
+        <p>The code review examined the original Travlr architecture, including authentication middleware, API request handling, Mongoose data models, and Angular components. The review identified areas for improvement in reliability, security, data integrity, and maintainability. In particular, revisiting the JWT middleware led to a correction that prevents requests from proceeding before token verification succeeds.</p>
+<p class="note"><strong>Code review video:</strong> The video link will be added here once it has been uploaded or hosted.</p>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="enhancements" aria-labelledby="enhancements-title">
+      <div class="section-index" aria-hidden="true"><span class="number">03</span><span class="short-rule"></span><span>DEVELOPMENT</span></div>
+      <div class="section-body">
+        <p class="section-kicker">Three connected enhancements</p>
+        <h2 id="enhancements-title">Travlr Project Enhancements</h2>
+        <p class="section-intro">Travlr is a MEAN-stack travel application using MongoDB, Express, Angular, and Node.js. Each enhancement builds on the same project to demonstrate the connections between software design, algorithms, and databases.</p>
+        <div class="project-name">CASE STUDY &nbsp; / &nbsp; TRAVLR &nbsp; / &nbsp; CS 465 → CS 499</div>
+        <article class="enhancement"><div class="enhancement-number">01</div><div><h3>Software Engineering</h3><p>Improved controller error handling, response codes, schema integrity, and Angular/API compatibility. Corrected JWT middleware control flow and added automated authentication tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_api" rel="noopener noreferrer" target="_blank">View backend code ↗</a></p></div></article><article class="enhancement"><div class="enhancement-number">02</div><div><h3>Algorithms & Data Structures</h3><p>Added trip search, maximum-price filtering, and ordering by name or price. Preserved the master dataset during client-side operations and verified functionality with automated tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_admin/src/app/trip-listing" rel="noopener noreferrer" target="_blank">View Angular algorithms ↗</a></p></div></article><article class="enhancement"><div class="enhancement-number">03</div><div><h3>Databases</h3><p>Expanded the test dataset, implemented MongoDB-backed search, sorting, filtering, and pagination, and connected Angular controls to backend query parameters.</p><p><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_api/controllers/trips.js" rel="noopener noreferrer" target="_blank">View query implementation ↗</a></p></div></article>
+        <div class="documentation"><h3>Enhancement Narratives</h3><p>The detailed narratives describe the original artifact, justification for each change, relevant course outcomes, development challenges, and lessons learned. Links to the final Word documents will be added here when they have been placed in the repository.</p></div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="source-code" aria-labelledby="source-title">
+      <div class="section-index" aria-hidden="true"><span class="number">04</span><span class="short-rule"></span><span>REPOSITORY</span></div>
+      <div class="section-body">
+        <p class="section-kicker">Project materials</p>
+        <h2 id="source-title">Source Code &amp; Testing</h2>
+        <p>The enhanced application and supporting tests are available in the public repository. The Angular test suite and Node.js JWT middleware tests were run during final integration.</p>
+        <ul class="link-list">
+<li><a href="https://github.com/apl321/cs499-Portfolio" rel="noopener noreferrer" target="_blank">Enhanced Travlr — complete GitHub repository ↗</a></li>
+<li><a href="https://github.com/apl321/cs499-Portfolio/tree/main/tests" rel="noopener noreferrer" target="_blank">Authentication middleware tests ↗</a></li>
+<li><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_admin/src/app/trip-listing/trip-listing.spec.ts" rel="noopener noreferrer" target="_blank">Search and sorting tests ↗</a></li>
+<li><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_admin/src/app/services/trip-data.spec.ts" rel="noopener noreferrer" target="_blank">Angular API query test ↗</a></li>
+</ul>
+        <p class="note"><strong>Original code:</strong> A separate link to the pre-enhancement Travlr source will be added after that version is included in the portfolio.</p>
+      </div>
+    </section>
+
+    <footer class="footer"><span>Andrew Townsend · Computer Science Capstone</span><span class="mono">SNHU &nbsp; / &nbsp; 2026</span></footer>
+  </main>
+</body>
+</html>
