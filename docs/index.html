@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Andrew Townsend's SNHU CS 499 Computer Science Capstone ePortfolio, featuring Travlr full-stack application enhancements.">
-  <title>Andrew Townsend | CS 499 ePortfolio</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Andrew Townsend's SNHU CS 499 Computer Science Capstone ePortfolio, featuring Travlr full-stack application enhancements." name="description"/>
+<title>Andrew Townsend | CS 499 ePortfolio</title>
+<style>
 :root { color-scheme: light; --charcoal:#253239; --charcoal-deep:#1c282f; --steel:#7d9fab; --steel-deep:#476c7a; --paper:#f4f4f0; --ink:#233138; --muted:#55656c; --line:#bec8c9; --subtle:#dce2e0; }
 * { box-sizing: border-box; }
 html { scroll-behavior:smooth; }
@@ -62,47 +63,58 @@ p { margin:0 0 19px; }
 @media (max-width:850px) { .hero { grid-template-columns:1fr; gap:25px; padding-top:50px; padding-bottom:45px; } .hero-aside { max-width:400px; } .portfolio-section { grid-template-columns:110px minmax(0,1fr); gap:25px; } }
 @media (max-width:600px) { .wrap { padding-left:20px; padding-right:20px; } .masthead-top { align-items:flex-start; } .masthead-meta { max-width:140px; } .hero { padding-top:38px; } .hero-aside { display:none; } .nav-inner a { padding:12px 8px 12px 0; margin-right:13px; font-size:.75rem; } .portfolio-section { display:block; padding:30px 0 42px; } .section-index { display:flex; gap:12px; align-items:center; margin-bottom:19px; } .section-index .number { font-size:1.3rem; margin:0; } .section-index .short-rule { display:none; } .footer { flex-direction:column; } }
 @media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto;}}
+
+/* Narrative sections: readable source text and optional Word downloads */
+.narrative { margin:15px 0 11px; border:1px solid var(--line); background:#f7f8f5; }
+.narrative summary { cursor:pointer; padding:11px 15px; font-size:.92rem; font-weight:700; color:#285466; }
+.narrative summary:hover { background:#e8efed; }
+.narrative[open] summary { border-bottom:1px solid var(--line); }
+.narrative-content { padding:22px 22px 12px; }
+.narrative-content h4 { font-size:1.02rem; margin:24px 0 10px; color:#304a53; line-height:1.4; }
+.narrative-content h4:first-child { margin-top:2px; }
+.narrative-content p { font-size:.96rem; line-height:1.8; margin:0 0 16px; font-weight:400; }
+.narrative-actions { margin:8px 0 13px; font-size:.89rem; font-weight:600; }
+@media (max-width:600px) { .narrative-content { padding:16px 14px 9px; } }
 </style>
 </head>
 <body>
-  <header class="masthead">
-    <div class="wrap masthead-top">
-      <div class="identity"><span class="mark mono">AT</span> Andrew Townsend</div>
-      <div class="masthead-meta mono">SNHU&nbsp; / &nbsp;CS 499<br>CAPSTONE EPORTFOLIO</div>
-    </div>
-    <div class="wrap hero">
-      <div>
-        <p class="hero-caption">Professional portfolio / 2026</p>
-        <h1>From chemical engineering<br>to <em>cybersecurity.</em></h1>
-        <p class="hero-desc">A computer science capstone focused on reliable software, secure design, and practical problem-solving through the Travlr full-stack application.</p>
-      </div>
-      <aside class="hero-aside" aria-label="Project overview">
+<header class="masthead">
+<div class="wrap masthead-top">
+<div class="identity"><span class="mark mono">AT</span> Andrew Townsend</div>
+<div class="masthead-meta mono">SNHU  /  CS 499<br/>CAPSTONE EPORTFOLIO</div>
+</div>
+<div class="wrap hero">
+<div>
+<p class="hero-caption">Professional portfolio / 2026</p>
+<h1>From chemical engineering<br/>to <em>cybersecurity.</em></h1>
+<p class="hero-desc">A computer science capstone focused on reliable software, secure design, and practical problem-solving through the Travlr full-stack application.</p>
+</div>
+<aside aria-label="Project overview" class="hero-aside">
         PROJECT  /  01
         <strong>Travlr</strong>
-        FULL-STACK APPLICATION<br>
-        MONGODB &nbsp;/&nbsp; EXPRESS<br>
-        ANGULAR &nbsp;/&nbsp; NODE.JS<br>
-        <br>
-        THREE ENHANCEMENTS<br>
+        FULL-STACK APPLICATION<br/>
+        MONGODB  /  EXPRESS<br/>
+        ANGULAR  /  NODE.JS<br/>
+<br/>
+        THREE ENHANCEMENTS<br/>
         ONE CONNECTED SYSTEM
       </aside>
-    </div>
-  </header>
-  <nav class="navbar" aria-label="Portfolio sections"><div class="wrap nav-inner">
-    <a href="#self-assessment">01&nbsp; Self-Assessment</a>
-    <a href="#code-review">02&nbsp; Code Review</a>
-    <a href="#enhancements">03&nbsp; Enhancements</a>
-    <a href="#source-code">04&nbsp; Source Code</a>
-  </div></nav>
-
-  <main class="wrap">
-    <section class="portfolio-section" id="self-assessment" aria-labelledby="self-title">
-      <div class="section-index" aria-hidden="true"><span class="number">01</span><span class="short-rule"></span><span>REFLECTION</span></div>
-      <div class="section-body">
-        <p class="section-kicker">Professional reflection</p>
-        <h2 id="self-title">Professional Self-Assessment</h2>
-        <p class="meta">Andrew Townsend · October 18, 2026</p>
-        <p>My educational and professional background has given me a somewhat different perspective than if I had entered the major directly. Before pursuing my B.S. in Computer Science at SNHU, I earned my B.S. in Chemical Engineering at UNH and gained professional experience in process engineering, manufacturing, and quality assurance. These experiences have influenced how I approach technical problems, particularly with regard to reliability, efficiency, and the potential consequences of design choices. Throughout the curriculum, I have developed a broader understanding of software development while also narrowing my professional interests toward cybersecurity.</p>
+</div>
+</header>
+<nav aria-label="Portfolio sections" class="navbar"><div class="wrap nav-inner">
+<a href="#self-assessment">01  Self-Assessment</a>
+<a href="#code-review">02  Code Review</a>
+<a href="#enhancements">03  Enhancements</a>
+<a href="#source-code">04  Source Code</a>
+</div></nav>
+<main class="wrap">
+<section aria-labelledby="self-title" class="portfolio-section" id="self-assessment">
+<div aria-hidden="true" class="section-index"><span class="number">01</span><span class="short-rule"></span><span>REFLECTION</span></div>
+<div class="section-body">
+<p class="section-kicker">Professional reflection</p>
+<h2 id="self-title">Professional Self-Assessment</h2>
+<p class="meta">Andrew Townsend · October 18, 2026</p>
+<p>My educational and professional background has given me a somewhat different perspective than if I had entered the major directly. Before pursuing my B.S. in Computer Science at SNHU, I earned my B.S. in Chemical Engineering at UNH and gained professional experience in process engineering, manufacturing, and quality assurance. These experiences have influenced how I approach technical problems, particularly with regard to reliability, efficiency, and the potential consequences of design choices. Throughout the curriculum, I have developed a broader understanding of software development while also narrowing my professional interests toward cybersecurity.</p>
 <p>When I began the program, I was uncertain about which area of computer science I wanted to pursue. Data analytics was an attractive destination due to my previous experience as a process engineer and experience in using data and analytics to solve problems. As I progressed, I became increasingly interested in cybersecurity. I especially enjoy the adversarial nature of cybersecurity, as it would force me to continually adapt to and anticipate new threats. My current goal is to transition into a cybersecurity role, potentially progressing into cloud security engineering. I am also interested in operational technology security, where my engineering background and experience with industrial processes could provide additional value.</p>
 <p>My professional experience was greatly enhanced through collaboration and communication. Many of my most successful initiatives began as a conversation with an operator. Although engineers usually have a thorough understanding of a process, the operators who work with it every day have practical knowledge that cannot be fully captured through spreadsheets and documentation. Failing to take their experience into consideration often results in missed opportunities for improvement and the sort of tone-deaf decisions my profession is often criticized for.</p>
 <p>Throughout the program I have also developed my understanding of algorithms and data structures. Much like engineering, efficiency, scalability, and ease of maintenance are important components of problem solving (though admittedly I have not had to do much scaling-up in engineering). My coursework in Python, SQL, and data analysis has broadened my understanding of how information can be organized and manipulated to solve problems, and should be of great use in analyzing the various trade-offs presented by multiple potential solutions. There is, of course, always room for improvement.</p>
@@ -111,48 +123,44 @@ p { margin:0 0 19px; }
 <p>All three enhancements build upon Travlr, a full-stack travel application originally developed in CS 465. The software engineering enhancement improves the application's structure, authentication, error handling, and maintainability. The algorithms enhancement adds functionality that allows users to search, filter, and sort trip information. The database enhancement expands upon its query capabilities, improves data validation, and connects the Angular interface to server-side searching, sorting, filtering, and pagination. Automated testing was also added to verify functionality, including authentication and database query parameters.</p>
 <p>Being able to use the same project for all three enhancements allowed me to examine how these areas interact with one another. Changes to one part of the application often required corresponding changes in other areas, which I think reinforces the importance of taking a holistic approach to applications.</p>
 <p>Completing this program has given me a foundation to continue developing my technical skills. When I graduated from my engineering major, our professors told us that now we were ready to learn engineering. I believe computer science is similar in that regard, and that the degree shows that you have enough of a foundation to begin learning how to make meaningful contributions to your team. Moving forward, I intend to build upon my education through certifications and independent projects, with the eventual goal of working in cloud security engineering. There is still much to learn, but I believe my professional experiences and education will put me in a position to succeed.</p>
-      </div>
-    </section>
-
-    <section class="portfolio-section" id="code-review" aria-labelledby="review-title">
-      <div class="section-index" aria-hidden="true"><span class="number">02</span><span class="short-rule"></span><span>EVALUATION</span></div>
-      <div class="section-body">
-        <p class="section-kicker">Initial evaluation</p>
-        <h2 id="review-title">Code Review</h2>
-        <p>The code review examined the original Travlr architecture, including authentication middleware, API request handling, Mongoose data models, and Angular components. The review identified areas for improvement in reliability, security, data integrity, and maintainability. In particular, revisiting the JWT middleware led to a correction that prevents requests from proceeding before token verification succeeds.</p>
+</div>
+</section>
+<section aria-labelledby="review-title" class="portfolio-section" id="code-review">
+<div aria-hidden="true" class="section-index"><span class="number">02</span><span class="short-rule"></span><span>EVALUATION</span></div>
+<div class="section-body">
+<p class="section-kicker">Initial evaluation</p>
+<h2 id="review-title">Code Review</h2>
+<p>The code review examined the original Travlr architecture, including authentication middleware, API request handling, Mongoose data models, and Angular components. The review identified areas for improvement in reliability, security, data integrity, and maintainability. In particular, revisiting the JWT middleware led to a correction that prevents requests from proceeding before token verification succeeds.</p>
 <p class="note"><strong>Code review video:</strong> The video link will be added here once it has been uploaded or hosted.</p>
-      </div>
-    </section>
-
-    <section class="portfolio-section" id="enhancements" aria-labelledby="enhancements-title">
-      <div class="section-index" aria-hidden="true"><span class="number">03</span><span class="short-rule"></span><span>DEVELOPMENT</span></div>
-      <div class="section-body">
-        <p class="section-kicker">Three connected enhancements</p>
-        <h2 id="enhancements-title">Travlr Project Enhancements</h2>
-        <p class="section-intro">Travlr is a MEAN-stack travel application using MongoDB, Express, Angular, and Node.js. Each enhancement builds on the same project to demonstrate the connections between software design, algorithms, and databases.</p>
-        <div class="project-name">CASE STUDY &nbsp; / &nbsp; TRAVLR &nbsp; / &nbsp; CS 465 → CS 499</div>
-        <article class="enhancement"><div class="enhancement-number">01</div><div><h3>Software Engineering</h3><p>Improved controller error handling, response codes, schema integrity, and Angular/API compatibility. Corrected JWT middleware control flow and added automated authentication tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_api" rel="noopener noreferrer" target="_blank">View backend code ↗</a></p></div></article><article class="enhancement"><div class="enhancement-number">02</div><div><h3>Algorithms & Data Structures</h3><p>Added trip search, maximum-price filtering, and ordering by name or price. Preserved the master dataset during client-side operations and verified functionality with automated tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_admin/src/app/trip-listing" rel="noopener noreferrer" target="_blank">View Angular algorithms ↗</a></p></div></article><article class="enhancement"><div class="enhancement-number">03</div><div><h3>Databases</h3><p>Expanded the test dataset, implemented MongoDB-backed search, sorting, filtering, and pagination, and connected Angular controls to backend query parameters.</p><p><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_api/controllers/trips.js" rel="noopener noreferrer" target="_blank">View query implementation ↗</a></p></div></article>
-        <div class="documentation"><h3>Enhancement Narratives</h3><p>The detailed narratives describe the original artifact, justification for each change, relevant course outcomes, development challenges, and lessons learned. Links to the final Word documents will be added here when they have been placed in the repository.</p></div>
-      </div>
-    </section>
-
-    <section class="portfolio-section" id="source-code" aria-labelledby="source-title">
-      <div class="section-index" aria-hidden="true"><span class="number">04</span><span class="short-rule"></span><span>REPOSITORY</span></div>
-      <div class="section-body">
-        <p class="section-kicker">Project materials</p>
-        <h2 id="source-title">Source Code &amp; Testing</h2>
-        <p>The enhanced application and supporting tests are available in the public repository. The Angular test suite and Node.js JWT middleware tests were run during final integration.</p>
-        <ul class="link-list">
+</div>
+</section>
+<section aria-labelledby="enhancements-title" class="portfolio-section" id="enhancements">
+<div aria-hidden="true" class="section-index"><span class="number">03</span><span class="short-rule"></span><span>DEVELOPMENT</span></div>
+<div class="section-body">
+<p class="section-kicker">Three connected enhancements</p>
+<h2 id="enhancements-title">Travlr Project Enhancements</h2>
+<p class="section-intro">Travlr is a MEAN-stack travel application using MongoDB, Express, Angular, and Node.js. Each enhancement builds on the same project to demonstrate the connections between software design, algorithms, and databases.</p>
+<div class="project-name">CASE STUDY   /   TRAVLR   /   CS 465 → CS 499</div>
+<article class="enhancement"><div class="enhancement-number">01</div><div><h3>Software Engineering</h3><p>Improved controller error handling, response codes, schema integrity, and Angular/API compatibility. Corrected JWT middleware control flow and added automated authentication tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_api" rel="noopener noreferrer" target="_blank">View backend code ↗</a></p><p class="narrative-actions"><a href="narratives/software-engineering.docx">Download Milestone 2 narrative (Word) ↗</a></p><details class="narrative"><summary>Read full Milestone 2 narrative</summary><div class="narrative-content"><h4>Artifact Description</h4><p>The artifact I selected is Travlr, a full-stack travel application that I originally created in CS 465. The application uses the MEAN stack, with Angular for the administrative front end, Node.js and Express for the Server and API, and MongoDB and Mongoose for persistent data storage. The application allows trip information to be retrieved, added and updated through a REST API. It also includes authentication using JSON Web Tokens on data modifying operations.</p><h4>Justification for Inclusion and Improvements</h4><p>I selected Travlr for my ePortfolio because it contains several areas of software development in one project: front-end development, API design, database access, authentication and data validation. Because of this I thought it would be a good artifact for demonstrating my ability to improve existing software.</p><p>For this enhancement, I focused mainly on improving the reliability and design of the API. Several controller programs had weak error handling and referenced non-existent variables (err). These were replaced with try/catch blocks and the HTTP responses were updated appropriately e.g. missing trips now return a 404 error instead of 400 (bad request), 409 conflict was added for duplicate trips, and failures return 500 Internal server error.</p><p>I also changed the trip lookup to findOne() from find() to prevent it from returning an array (one trip, one code). This required updating the Angular service as well as editing some supporting components to keep everyone on the same page. The Mongoose schema was also improved by trimming string characters and imposing unique trip codes. These changes should improve the consistency, readability, and reliability of the app.</p><h4>Progress Towards Course Outcomes</h4><p>The changes helped me make some progress towards several outcomes. The software engineering and design would be foremost, as I evaluated an existing application, identified weaknesses in its design, and made changes that improved how it handled data and errors as well as restoring its initial functionality in some areas (I brought the wrong laptop on vacation a year ago and had to improvise a bit more than I would have liked).</p><p>This enhancement also supports the security outcome as well: the application already had JWT authentication for protected operations, and testing the enhanced application that updated requests were correctly rejected in the absence of a valid token.</p><p>The enhancement also touched on the outcome involving the design and evaluation of computing solutions. Changing find() to findOne() was a small change, but it made more sense for the way the application actually uses trip codes. One code should return one trip, not an array containing one trip. The downside was that changing the backend response also meant changing the Angular service and edit component so everything was still in agreement with each other.</p><p>I do not think I need to make any major changes to my outcome coverage plan at this point. The artifact is already giving me a decent amount of software engineering, security, and design work to discuss, and I will probably continue building on those areas as I move toward the final ePortfolio.</p><h4>Reflection on the enhancement process</h4><p>One of the biggest things I noticed during this enhancement was how different the project looked coming back to it after some time had passed. When I originally made Travlr, I understood enough of the individual pieces to get the project working, but there were definitely parts of it that I treated more like black boxes than I do now. Going back through the application made the relationship between Angular, Express, MongoDB, Mongoose, authentication, and the API much easier to follow (though not too easy, unfortunately).</p><p>The biggest challenge was that fixing one problem created more problems elsewhere. Changing the trip lookup from find() to findOne() made sense, but that also changed the type of data being returned to Angular. That meant the Angular service and the edit component had to be updated too. Later, when testing updates, the application returned a 401 Unauthorized error. At first that looked like another problem, but it turned out there simply was not a token stored in the browser. Once I registered a test user and stored the token, the update worked. In that case, the error actually showed that the middleware was doing its job. Unfortunately, it was also discovered that it could also allow unauthorized requests, which needed to be rectified.</p><p>There were also some older project issues that had to be dealt with before I could really test the enhancement. Some dependencies had to be reinstalled, a few missing authentication methods had to be restored, and there were a couple of Angular issues that had to be cleaned up before the application would run correctly again. None of those were especially difficult on their own, but together they took more time than I expected.</p><p>Overall, the main thing I learned is that improving existing software is rarely limited to changing one file. A fairly small design change can affect the database model, API, frontend service, and user interface. The process was a little messy at times, but by the end I had a much better understanding of how the pieces of Travlr fit together and why some of the original design choices worked better than others. Thankfully, working though these problems has helped me to refamiliarize myself with the program and should carry over to the rest of the project.</p><p>During the final stages, I also revisited the authentication middleware and corrected a vulnerability identified during my code review. The original allowed requests to proceed before JWT verification was complete. I also added four automated tests to cover missing, invalid, expired, and valid tokens.</p></div></details></div></article><article class="enhancement"><div class="enhancement-number">02</div><div><h3>Algorithms &amp; Data Structures</h3><p>Added trip search, maximum-price filtering, and ordering by name or price. Preserved the master dataset during client-side operations and verified functionality with automated tests.</p><p><a href="https://github.com/apl321/cs499-Portfolio/tree/main/app_admin/src/app/trip-listing" rel="noopener noreferrer" target="_blank">View Angular algorithms ↗</a></p><p class="narrative-actions"><a href="narratives/algorithms-data-structures.docx">Download Milestone 3 narrative (Word) ↗</a></p><details class="narrative"><summary>Read full Milestone 3 narrative</summary><div class="narrative-content"><h4>Prompt 1: Describe Artifact</h4><p>The artifact I selected is the Travlr full-stack web application that I originally created in CS 465. Travlr is a booking application built using the MEAN stack which includes MongoDB, Express, Angular, and Node.js. The app allows trip data to be stored in a database and displayed through an Angular interface. For this enhancement, the focus was the way the trip data was stored, filtered, searched and sorted.</p><h4>Prompt 2: Artifact justification</h4><p>I selected Travlr because I saw some opportunities to improve upon what I originally created, and I like the idea of all three enhancements in the same project. Initially, Travlr could retrieve and display trip information, but did not have any option insofar as sorting and searching. I was able to add the ability to search trips by the name, resort, or trip code, filter by maximum price, and sort by name or prices. I also updated the perPerson value to a number for better comparison.</p><p>The enhancement uses arrays for both the full list of destinations as well as the filtered variant. Searching and filtering both work by matching values, while sorting works by reordering the list based on the option selected by the user. This separation is necessary so that the master list isn’t altered in the process.</p><h4>Prompt 3: Outcome compared to module 1 projections</h4><p>My module one plans to enhance Travlr included adding search, filter and sort functionality to the project, which I believe were accomplished. With regards to efficiency trade-offs, the small dataset was not able to provide any real test of efficiency. At the time of this enhancement, Travlr loaded trip data into the client-side architecture which helped to minimize the amount of server processing necessary on the server-side. In a real deployment, I believe a hybrid approach would be best: the backend and database can handle the heavy filtering, while the client-side could handle sorting and filtering operations within the set produced by the backend. This approach still makes use of the clients’ own processing power while preventing it from being bogged down with larger datasets.</p><p>The enhancement supports the outcome regarding the design and evaluation programming solutions using algorithmic principles and relevant computer science practices. The search, filtering, and sorting functions all require decisions about how to structure the data. I have not yet had any major changes from my original plan, aside from possibly incorporating a hybrid setup utilizing both server and client-side resources.</p><h4>Prompt 4: Enhancement process</h4><p>One thing I learned is that an effective algorithm enhancement does not need to be particularly complicated to have a useful effect. The search and filtering operations were simple to implement but improved the way the user can interact with the application. Data types and the way the application is structured can also have a pronounced effect if they are not adequately addressed; had I not changed perPerson to a number from a string the changes would not have worked properly. Also, I learned it is very important to make sure you preserve the original dataset when filtering or sorting. Otherwise, the original dataset may be permanently altered.</p><p>Subsequently, I added six automated tests to verify the search, filtering, and sorting functionality. These include case-insensitive searching, price comparisons, sorting order, and preserving the original data sets. All six tests passed. During the database enhancement, I also connected the Angular controls to the backend query functionality to allow operations to be performed by MongoDB instead of the client.</p></div></details></div></article><article class="enhancement"><div class="enhancement-number">03</div><div><h3>Databases</h3><p>Expanded the test dataset, implemented MongoDB-backed search, sorting, filtering, and pagination, and connected Angular controls to backend query parameters.</p><p><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_api/controllers/trips.js" rel="noopener noreferrer" target="_blank">View query implementation ↗</a></p><p class="narrative-actions"><a href="narratives/databases.docx">Download Milestone 4 narrative (Word) ↗</a></p><details class="narrative"><summary>Read full Milestone 4 narrative</summary><div class="narrative-content"><p>The artifact I selected for this enhancement was Travlr, a full-stack travel application originally developed in CS 465. The application uses MongoDB, Express, Angular, and Node.js to store, retrieve, and manage travel information, and I have used this artifact in my previous enhancements. For this milestone, I shifted to the app’s database and how data was stored and retrieved. I chose to continue working on Travlr because it was my most complex and challenging project in the major and I wanted to improve it further.</p><p>One of the limitations of the original app was that its database contained only a handful of entries. While this was sufficient for demonstrating functionality, more would be required to properly demonstrate this milestone’s enhancements. To address this, I created a seeding script with JavaScript to generate an extra 100 trip entries. From there, I altered the backend to allow MongoDB to handle searching, price filtering, sorting, and pagination (difficult things to demonstrate with only a handful of trips). The app’s prior iteration handled these operations on the client-side, where a few trips would not provide too much of a burden. Now that there are 100+ trips, it was decided that moving these operations to the database would improve their operation as well as scalability since it can now request specific records as opposed to retrieving the entire inventory and processing from there. Validation for pricing and pagination were also included to address invalid requests.</p><p>This enhancement primarily addressed the fourth course outcome, applying the appropriate computing tools and practices to develop useful solutions.  It also addresses the third outcome regarding the design and implementation of database queries as well as the trade-offs between client and server-side processing. There was also a small amount of progress towards the fifth outcome via input validation, but this was not the primary focus. I would say my strongest progress throughout the course has been in software design and engineering, though there is still much work to be done with regards to security, whose demonstration is highly relevant to my future plans.</p><p>The enhancement process has reinforced the need and importance of testing and attention to detail. Small coding mistakes in the original continue to be a problem, and some mistakes were made because I had a few too many versions of travlr in the same folder. Otherwise, the implementations were fairly straightforward. Once the database was expanded, I was able to test some more advanced queries against a much larger set of records and verify the functionality of the filtering, sorting, and pagination operations. One thing I learned was the importance of having the proper quantity of data to properly test a function. Testing in a vacuum makes sense at the development level, but a more realistic volume was necessary to properly verify the functions as well as create a more pertinent testing environment. Client-side processing makes sense with a few trips, but moving these operations to the database will become much more useful as the database grows.</p><p>Following feedback from my instructor, I proceeded to connect the Angular search, filtering, sorting and pagination controls to the database endpoint.  This allowed the app to use MongoDB’s query capabilities instead of relying on client-side processing. I also expanded the backend search to include trip names, resorts, and codes. The integration was tested manually against the database, and I also added an automated test to verify that Angular properly transmitted the search, max price, sorting, and pagination parameters.</p></div></details></div></article>
+<div class="documentation"><h3>Enhancement Narratives</h3><p>Select “Read full narrative” under each enhancement to view the complete write-up on this site, or download its Word document. The narratives document design decisions, course outcomes, testing, feedback, and reflections.</p></div>
+</div>
+</section>
+<section aria-labelledby="source-title" class="portfolio-section" id="source-code">
+<div aria-hidden="true" class="section-index"><span class="number">04</span><span class="short-rule"></span><span>REPOSITORY</span></div>
+<div class="section-body">
+<p class="section-kicker">Project materials</p>
+<h2 id="source-title">Source Code &amp; Testing</h2>
+<p>The enhanced application and supporting tests are available in the public repository. The Angular test suite and Node.js JWT middleware tests were run during final integration.</p>
+<ul class="link-list">
 <li><a href="https://github.com/apl321/cs499-Portfolio" rel="noopener noreferrer" target="_blank">Enhanced Travlr — complete GitHub repository ↗</a></li>
 <li><a href="https://github.com/apl321/cs499-Portfolio/tree/main/tests" rel="noopener noreferrer" target="_blank">Authentication middleware tests ↗</a></li>
 <li><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_admin/src/app/trip-listing/trip-listing.spec.ts" rel="noopener noreferrer" target="_blank">Search and sorting tests ↗</a></li>
 <li><a href="https://github.com/apl321/cs499-Portfolio/blob/main/app_admin/src/app/services/trip-data.spec.ts" rel="noopener noreferrer" target="_blank">Angular API query test ↗</a></li>
 </ul>
-        <p class="note"><strong>Original code:</strong> A separate link to the pre-enhancement Travlr source will be added after that version is included in the portfolio.</p>
-      </div>
-    </section>
-
-    <footer class="footer"><span>Andrew Townsend · Computer Science Capstone</span><span class="mono">SNHU &nbsp; / &nbsp; 2026</span></footer>
-  </main>
+<p class="note"><strong>Original code:</strong> A separate link to the pre-enhancement Travlr source will be added after that version is included in the portfolio.</p>
+</div>
+</section>
+<footer class="footer"><span>Andrew Townsend · Computer Science Capstone</span><span class="mono">SNHU   /   2026</span></footer>
+</main>
 </body>
 </html>
