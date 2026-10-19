@@ -1,0 +1,65 @@
+<div>
+    <button (click)="addTrip()" class="btn btn-info">Add Trip</button>
+</div>
+<div class="mt-3">
+  <label for="tripSearch"> Search Trips:</label>
+  <input
+         id="tripSearch"
+         type="text"
+         [(ngModel)]="searchTerm"
+         placeholder="Search by name, resort, or code" />
+</div>
+
+<div class="mt-2">
+    <label for="maxPrice">Maximum Price:</label>
+    <input
+           id="maxPrice"
+           type="number"
+           [(ngModel)]="maxPrice"
+           min="0"
+           placeholder="No maximum" />
+</div>
+
+<div class="mt-2">
+  <label for="sortOption">Sort Trips:</label>
+  <select id="sortOption"
+          [(ngModel)]="sortOption">
+          <option value="none">Default</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+  </select>
+
+  <div class="mt-3">
+    <button type="button"
+            class="btn btn-primary"
+            (click)="applyServerFilters()">
+      Apply Filters
+    </button>
+  </div>
+
+</div>
+  <div class="row">
+    <div *ngFor="let trip of trips" class="col-md-4">
+      <app-trip-card [trip]="trip" class="card-deck mt-2"></app-trip-card>
+    </div>
+  </div>
+<div class="mt-3 d-flex align-items-center gap-3">
+  <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="previousPage()"
+          [disabled]="page === 1">
+    Previous
+  </button>
+
+  <span> Page {{page}}</span>
+
+  <button
+          type="button"
+          class="btn btn-secondary"
+          (click) ="nextPage()"
+          [disabled]="trips.length < pageSize">
+    NEXT
+  </button>
+</div>
